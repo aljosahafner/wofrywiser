@@ -11,7 +11,7 @@ except AttributeError:
 
 NAME = 'wofrywiser'
 
-VERSION = '0.1.2'
+VERSION = '0.1.3'
 ISRELEASED = True
 
 DESCRIPTION = 'WOFRY (Wave Optics FRamework in pYthon) for Wiser library'
@@ -47,7 +47,7 @@ INSTALL_REQUIRES = (
     'scipy',
     'syned>=1.0.10',
     'wofry>=1.0.15',
-    'LibWiser>=0.9.10'
+    'LibWiser>=0.9.15'
 )
 
 SETUP_REQUIRES = (
