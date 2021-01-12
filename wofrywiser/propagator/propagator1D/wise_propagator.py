@@ -65,8 +65,13 @@ class WiserPropagator(Propagator1D):
         else:
             is_generic_wavefront = False
 
-        if not is_generic_wavefront and not wavefront is None:
-            if not isinstance(wavefront, WiserWavefront): raise ValueError("Wavefront cannot be managed by this propagator")
+        try:
+            if not is_generic_wavefront and not wavefront is None:
+                if isinstance(wavefront, WiserWavefront):
+                    pass
+        except Exception as e:
+            QMessageBox.critical(self, "Wavefront cannot be managed by this propagator", str(e), QMessageBox.Ok)
+            self.setStatusMessage("Wavefront cannot be managed by this propagator")
 
         if is_generic_wavefront:
             wavefront = WiserWavefront.fromGenericWavefront(wavefront)
