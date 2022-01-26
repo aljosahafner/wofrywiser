@@ -11,7 +11,7 @@ except AttributeError:
 
 NAME = 'wofrywiser'
 
-VERSION = '0.1.3'
+VERSION = '0.1.4'
 ISRELEASED = True
 
 DESCRIPTION = 'WOFRY (Wave Optics FRamework in pYthon) for Wiser library'

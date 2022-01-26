@@ -106,7 +106,12 @@ class WiserPropagator(Propagator1D):
 
             result = WiserWavefront(wiser_computation_results=oeEnd.ComputationData)
         elif PropagationManager.Instance().get_propagation_mode(WISE_APPLICATION) == PropagationMode.WHOLE_BEAMLINE:
-            result = wavefront
+
+            beamline.RefreshPositions()
+            beamline.ComputeFields()
+
+            result = WiserWavefront(wiser_computation_results=oeEnd.ComputationData)
+            # result = wavefront
         else:
             result = None
 

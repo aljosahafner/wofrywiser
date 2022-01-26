@@ -1,4 +1,4 @@
-recursive-include Wofrywiser *.pyx
-recursive-include WofryWiser *.py
+recursive-include wofrywiser *.pyx
+recursive-include wofryWiser *.py
 
 include README.txt
